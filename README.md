@@ -1,3 +1,24 @@
+## Introduction
+
+A Simple authentication (public/protected) routes with Nextjs 14 using spring boot web security default settings.
+
+## Requirements
+
+0. add `SPRING_BOOT_HOST` in .env 
+
+## How?
+
+`api()` wraps nextjs `fetch()` with `SPRING_BOOT_HOST`
+
+login form proxy the request to spring boot api and save the `JSSSIONID` cookie in the browser.
+
+we reuse the `JSESSIONID` cookie in the browser to authenticate the request to spring boot api.
+
+if server components does not use `api()` to fetch data, it is then public and not protected.
+otherwise, it is a protected server component and `api()` will redirect unauthenticated users to /login.
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
