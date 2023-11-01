@@ -2,9 +2,10 @@
 
 A Simple authentication (public/protected) routes with Nextjs 14 using spring boot web security default settings.
 
-## Requirements
+## Usage
 
 0. add `SPRING_BOOT_HOST` in .env 
+0. customize login form at `(api)/login/form.tsx`
 
 ## How?
 
